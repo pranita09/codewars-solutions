@@ -21,3 +21,44 @@ const setAlarm = (employed, vacation) => employed===true && vacation===false ? t
 // alternate
 const setAlarm2 = (employed, vacation) => employed && !vacation;
 // console.log(setAlarm2(true, false));
+
+
+//Question 04: Your task is to make two functions ( max and min, or maximum and minimum, etc., depending on the language ) that receive a list of integers as input, and return the largest and lowest number in that list, respectively.
+
+const min = array => {
+    let minValue = array[0]
+    for(let i=0; i<=array.length-1; i++){
+      if(minValue>array[i]){
+        minValue = array[i];
+      }
+    } 
+    return minValue;
+  }
+  
+  const max = array => {
+    let maxValue = array[0];
+    for(let i=0; i<=array.length-1; i++){
+      if(maxValue < array[i]){
+        maxValue = array[i];
+      }
+    }
+    return maxValue;
+  }
+
+// console.log(min([-3, 90, 12, 45, -9, 0]));
+// console.log(max([-3, 90, 12, 45, -9, 0]));
+
+// alternate: using array destructuring
+
+const min2 = array => Math.min(...array);
+const max2 = array => Math.max(...array);
+// console.log(min2([-3, 90, 12, 45, -9, 0]));
+// console.log(max2([-3, 90, 12, 45, -9, 0]));
+
+// alternate
+
+const min3 = array => Math.min.apply(null, array);
+const max3 = array => Math.max.apply(null, array);
+// console.log(min3([-3, 90, 12, 45, -9, 0]));
+// console.log(max3([-3, 90, 12, 45, -9, 0]));
+
