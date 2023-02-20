@@ -62,3 +62,36 @@ const max3 = array => Math.max.apply(null, array);
 // console.log(min3([-3, 90, 12, 45, -9, 0]));
 // console.log(max3([-3, 90, 12, 45, -9, 0]));
 
+
+// Question 05: Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.
+
+function reverseWords(str) {
+  return str.split(' ').map(function(word){
+    return word.split('').reverse().join('');
+  }).join(' ');
+}
+console.log(reverseWords("I am doing programming."));
+
+
+// Question 06: Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.
+
+const boolToWord = bool => bool ? "Yes" : "No";
+
+
+// Question 07: An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
+
+function isIsogram(str){
+        // Convert the string in lower case letters
+    str = str.toLowerCase();
+    let len = str.length;
+    let arr = str.split('');
+  
+    arr.sort();
+    for (let i = 0; i < len - 1; i++){
+      if (arr[i] == arr[i + 1])
+        return false;
+    }
+    return true;
+}
+
+
