@@ -94,3 +94,11 @@ const oddOrEven1 = array => array.reduce((a, b) => a + b, 0) % 2 === 0 ? 'even' 
 
 
 
+// Question 06:Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
+
+function evenOrOdd(number) {
+    return number%2===0 ? `Even` : `Odd`;
+}
+
+
+
