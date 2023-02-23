@@ -61,6 +61,36 @@ const getSum1 = (a, b) => {
 // Question 03: Implement a function that accepts 3 integer values a, b, c. The function should return true if a triangle can be built with the sides of given length and false in any other case. (In this case, all triangles must have surface greater than 0 to be accepted).
 
 const isTriangle = (a, b, c) => a + b > c && a + c > b && c + b > a;
-console.log(isTriangle(10, -2, 10))
+// console.log(isTriangle(10, -2, 10))
 
-// Question 04: 
+
+
+// Question 04: It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string. You're given one parameter, the original string. You don't have to worry with strings with less than two characters.
+
+const removeChar = str =>{
+    let arr = [...str];
+    arr.shift();
+    arr.pop();
+    return arr.join('');
+}
+
+const removeChar1 = str => str.slice(1, -1);
+
+// console.log(removeChar1("Pranita"));
+
+
+
+// Question 05:Given a list of integers, determine whether the sum of its elements is odd or even. Give your answer as a string matching "odd" or "even". If the input array is empty consider it as: [0] (array with a zero).
+
+function oddOrEven(array) {
+    return array.reduce(function(sum, item) {
+      return sum + item
+    }, 0) % 2 == 0 ? 'even' : 'odd';
+}
+
+const oddOrEven1 = array => array.reduce((a, b) => a + b, 0) % 2 === 0 ? 'even' : 'odd';  
+
+// console.log(oddOrEven([-2, 4, 56, -23, 90]))
+
+
+
