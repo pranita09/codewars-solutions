@@ -7,17 +7,16 @@ strThree = "MaYa";
 
 const upperOrLower = str => {
     let newString = "";
-    let lowerCount = 0;
-    let upperCount = 0;
+    let count = 0;
     for(let i=0; i<str.length; i++){
         if(str[i]===str[i].toLowerCase()){
-            lowerCount++;
+            count++;
         }else{
-            upperCount++;
+            count--;
         }
     }
     // console.log(lowerCount, upperCount);
-    return lowerCount>upperCount ? str.toLowerCase() : str.toUpperCase();
+    return count>0 ? str.toLowerCase() : str.toUpperCase();
 }
 
 console.log(upperOrLower(strOne));
