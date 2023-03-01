@@ -110,3 +110,26 @@ const isSquare1 = n => {
 const isSquare2 = n => Math.sqrt(n) % 1 === 0
 
 console.log(isSquare2(0));
+
+
+// Question 07:
+// Write function bmi that calculates body mass index (bmi = weight / height2).
+
+function bmi(weight, height) {
+    let bmi = weight/height**2;
+    if(bmi<=18.5)
+      return "Underweight";
+    else if(bmi<=25.0)
+      return "Normal";
+    else if(bmi<=30.0)
+      return "Overweight";
+    else 
+      return "Obese";
+  }
+
+  function bmi1(weight, height) {
+    const $ = weight / height**2;
+    return $ <= 18.5 ? 'Underweight' : $ <= 25.0 ? 'Normal' : $ <= 30.0 ? 'Overweight' : 'Obese';
+  }
+
+//   console.log(bmi1())
