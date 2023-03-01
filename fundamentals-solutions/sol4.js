@@ -70,4 +70,43 @@ function disemvowel(str) {
 
 
 // Question 05:
+// Write a function that takes an array of words and smashes them together into a sentence and returns the sentence. You can ignore any need to sanitize words or add punctuation, but you should add spaces between each word. Be careful, there shouldn't be a space at the beginning or the end of the sentence!
 
+function smash1 (words) {
+    let str = words.join(" ");
+     return str;
+  };
+
+const smash = words => words.join(" ");
+
+// console.log(smash(["This", "is", "your", "life.", "Hare", "Krishna", "!"]));
+
+
+
+// Question 06:
+// Given an integral number, determine if it's a square number
+
+var isSquare = function(n){
+    if(n>=0){
+      let sr = Math.sqrt(n);
+      if(sr*sr === n)
+        return true;
+      return false;
+    }
+    return false;
+  }
+
+const isSquare1 = n => {
+    if(n>=0){
+        for(let i=0; i*i<=n; i++){
+        if(n%i === 0 && Math.floor(n/i) === i)
+          return true;
+        return false;
+        }
+    }
+    return false;
+}
+
+const isSquare2 = n => Math.sqrt(n) % 1 === 0
+
+console.log(isSquare2(0));
