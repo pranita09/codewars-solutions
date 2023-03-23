@@ -17,6 +17,10 @@ const indexedCapitalizer = (str, arr) => {
     return newArr.join('');
 }
 
+
+
+
+
 const indexedCapitalizer1 = (str, arr) => {
     let newString = "";
     for(let i=0; i<str.length; i++){
